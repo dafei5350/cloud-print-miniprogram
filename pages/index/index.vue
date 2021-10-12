@@ -5,7 +5,9 @@
 			<button class="cu-btn bg-red margin-tb-sm lg">文档打印</button>
 			<button class="cu-btn bg-blue margin-tb-sm lg">图片打印</button>
 			<button class="cu-btn bg-yellow margin-tb-sm lg">其他打印(大文件，压缩包等)</button>
+			<button class="cu-btn bg-pink margin-tb-sm lg">打印历史</button>
 		</view>
+		<test-a></test-a>
 	</view>
 </template>
 
@@ -17,6 +19,11 @@
 			}
 		},
 		onLoad() {
+			this.$http.get('/user/wxapp/authorize', {params: {userName: 'name', password: '123456'}}).then(res => {
+			
+			}).catch(err => {
+				console.log("测试请求", err)
+			})
 			this.$http.get('/user/login', {params: {userName: 'name', password: '123456'}}).then(res => {
 			
 			}).catch(err => {

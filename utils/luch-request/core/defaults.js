@@ -4,7 +4,7 @@
 
 
 export default {
-  baseURL: '127.0.0.1',
+  baseURL: 'https://xinweiliang.admin.it120.cc/xinweiliang',
   header: {},
   method: 'GET',
   dataType: 'json',

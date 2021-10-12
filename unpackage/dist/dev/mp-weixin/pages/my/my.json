@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "uni-app",
   "usingComponents": {
-    "test-a": "/components/test-a/test-a"
+    "my-login": "/components/my-login/my-login"
   }
 }
