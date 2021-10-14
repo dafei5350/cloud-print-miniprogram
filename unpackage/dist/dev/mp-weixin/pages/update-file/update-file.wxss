@@ -1,0 +1,34 @@
+
+.container.data-v-75c65d88{
+	margin-bottom: 200rpx;
+}
+.print-file.data-v-75c65d88{
+	width: 95%;
+	height: auto;
+	background-color: #ffffff;
+	border-radius: 15rpx;
+	margin-top: 15rpx;
+	padding: 15rpx;
+	position: relative;
+}
+.print-file .position-close.data-v-75c65d88{
+	position: absolute;
+	top: 15rpx;
+	right: 15rpx;
+}
+.print-file .describe.data-v-75c65d88{
+	display: flex;
+	flex-direction: row;
+	margin:10rpx 10rpx 0 10rpx;
+}
+.print-file .describe .file-img.data-v-75c65d88{
+	width: 80rpx;
+	height: 90rpx;
+}
+.print-file .describe .content.data-v-75c65d88{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 15rpx;
+}
+

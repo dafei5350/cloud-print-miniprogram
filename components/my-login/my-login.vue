@@ -21,17 +21,17 @@
 </template>
 
 <script>
-// import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 export default {
   name: 'my-login',
   data() {
     return {};
   },
-  // computed: {
-  //   ...mapState('user', ['token', 'userInfo'])
-  // },
+  computed: {
+    ...mapState('user', ['token', 'userInfo'])
+  },
   methods: {
-    // ...mapActions('user', ['login', 'logout']),
+    ...mapActions('user', ['login', 'logout']),
     /**
      * 获取用户信息
      */
@@ -43,6 +43,7 @@ export default {
       uni.getUserProfile({
         desc: '登录后可同步数据',
         success: async (obj) => {
+					console.log("aaa", obj);
           // 调用 action ，请求登录接口
           await this.login(obj);
           // 登录成功之后，发送事件
@@ -74,7 +75,15 @@ export default {
         errMsg: 'getUserProfile:ok',
         iv: 'c+NbINO4CuEWCBYGG2FxWw==',
         rawData:
-          '{"nickName":"小慕同学","gender":1,"language":"zh_CN","city":"","province":"","country":"China","avatarUrl":"https://m.imooc.com/static/wap/static/common/img/logo-small@2x.png"}',
+          `{
+						"nickName":"小慕同学",
+						"gender":1,
+						"language":"zh_CN",
+						"city":"",
+						"province":"",
+						"country":"China",
+						"avatarUrl":"https://m.imooc.com/static/wap/static/common/img/logo-small@2x.png",
+						}`,
         signature: '449a10f11998daf680fe546a5176e6e2973516ce',
         userInfo: { nickName: '小慕同学', gender: 1, language: 'zh_CN', city: '', province: '' }
       });
@@ -111,12 +120,12 @@ export default {
     height: 78px;
   }
   .login-desc {
-    color: $uni-text-color-grey;
-    font-size: $uni-font-size-base;
-    margin-top: $uni-spacing-col-big;
+    color: red;
+    font-size: 35rpx;
+    margin-top: 100rpx;
   }
   .login-btn {
-    margin-top: $uni-spacing-col-big;
+    margin-top: 100rpx;
     width: 85%;
   }
 }

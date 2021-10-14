@@ -69,5 +69,10 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "2"
+    "vueVersion" : "2",
+    "mp-qq" : {
+        "setting" : {
+            "es6" : true
+        }
+    }
 }

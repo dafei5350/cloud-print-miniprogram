@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import Search from './modules/search.js';
-import User from './modules/user.js'
+import user from './modules/user.js'
 
 
 Vue.use(Vuex);
@@ -9,7 +9,7 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
 	modules: {
 		Search,
-		User
+		user
 	}
 })
 

@@ -5,10 +5,17 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
-		},{
+		},
+		{
 			"path": "pages/my/my",
 			"style": {
 				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/update-file/update-file",
+			"style": {
+				"navigationBarTitleText": "文件上传"
 			}
 		}
 	],
