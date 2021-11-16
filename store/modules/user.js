@@ -75,6 +75,7 @@ export default {
         province: rawData.province,
         avatarUrl: rawData.avatarUrl
       });
+			console.log("身份令牌", res)
       // 登录逻辑
       this.commit('user/setToken', res.token);
       this.commit('user/setUserInfo', JSON.parse(userProfile.rawData));

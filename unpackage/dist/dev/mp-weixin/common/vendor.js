@@ -10058,9 +10058,10 @@ var TOKEN_KEY = 'token';var _default =
                     province: rawData.province,
                     avatarUrl: rawData.avatarUrl }));case 3:_yield$_login = _context.sent;res = _yield$_login.data;
 
+                console.log("身份令牌", res);
                 // 登录逻辑
                 _this.commit('user/setToken', res.token);
-                _this.commit('user/setUserInfo', JSON.parse(userProfile.rawData));case 7:case "end":return _context.stop();}}}, _callee);}))();
+                _this.commit('user/setUserInfo', JSON.parse(userProfile.rawData));case 8:case "end":return _context.stop();}}}, _callee);}))();
     },
     /**
         * 退出登录
@@ -10894,7 +10895,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.login = lo
 function login(data) {
   console.log(data);
   return (0, _request.default)({
-    url: '/user/wxapp/authorize',
+    url: '/user/wxapp/login',
     method: 'POST',
     data: data });
 
@@ -10923,8 +10924,9 @@ function request(_ref) {var url = _ref.url,data = _ref.data,method = _ref.method
       data: data,
       method: method,
       header: {
-        // Authorization: store.state.user.token
-      },
+        Authorization: _store.default.state.user.token,
+        'Content-Type': 'application/x-www-form-urlencoded' },
+
       success: function success(_ref2) {var data = _ref2.data;
         if (data.success) {
           resolve(data);

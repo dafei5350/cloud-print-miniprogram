@@ -97,11 +97,6 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  if (!_vm._isMounted) {
-    _vm.e0 = function($event) {
-      _vm.fileList.length < 10 ? "addFile" : ""
-    }
-  }
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -136,6 +131,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
 //
 //
 //
@@ -242,7 +241,6 @@ var _default =
 
     },
     onImgType: function onImgType(fileType) {
-      console.log(fileType);
       var excel = ['xls', 'xlsx', 'csv', 'xlsb'];
       var word = ['doc', 'docx'];
       var ppt = ['ppt', 'pptx', 'pps', 'pot'];

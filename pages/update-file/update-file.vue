@@ -4,12 +4,16 @@
 		    <block slot="backText">返回</block>
 		    <block slot="content">文件配置</block>
 		</cu-custom>
-		<view class="container">
+		<view class="null-img" v-if="fileList.length == 0">
+			<image class="" src="../../static/null.png" mode="aspectFill"></image>
+			<text class="text-gray">暂无打印文件</text>
+		</view>
+		<view class="container" v-if="fileList.length != 0">
 			<view class="flex flex-direction align-center" v-for="(item, index) in fileList" :key="index">
 				<view class="print-file">
 					<text class="lg text-gray cuIcon-close position-close" @click="delFile" :id="index"></text>
 					<view class="describe">
-						<image class="file-img" :src="item.tempImgType" mode=""></image>
+						<image class="file-img" :src="item.tempImgType" mode="aspectFill"></image>
 						<view class="content">
 							<view class="text-black text-xl text-cut text-bold" style="width: 500rpx;">{{ item.name }}</view>
 							<view class="text-gray">{{item.printSize}}/{{item.printColor?'彩色':'黑白'}}/{{item.direction?'纵向':'横向'}}/{{item.printNum}}份</view>
@@ -24,8 +28,8 @@
 			</view>
 		</view>
 		<view class="cu-bar bg-white tabbar border shop shadow foot">
-			<view :class="[fileList.length < 10?'bg-green submit':'bg-red submit']" @click="fileList.length < 10?'addFile':''">
-				<text class="lg text-blue" :class="cuIcon-add"></text>继续添加（{{fileList.length}}/10）
+			<view class="bg-green submit" @click="addFile">
+				<text class="lg text-blue cuIcon-add" ></text>继续添加（{{fileList.length}}/10）
 			</view>
 			<view class="bg-blue submit">立即打印</view>
 		</view>
@@ -105,7 +109,6 @@
 				});
 			},
 			onImgType(fileType){
-				console.log(fileType)
 				let excel = ['xls', 'xlsx', 'csv', 'xlsb']
 				let word = ['doc', 'docx']
 				let ppt = ['ppt', 'pptx', 'pps', 'pot']
@@ -133,6 +136,18 @@
 </script>
 
 <style scoped>
+	.null-img{
+		width: 100vw;
+		height: 75vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.null-img image{
+		width: 300rpx;
+		height: 300rpx;
+	}
 	.container{
 		margin-bottom: 200rpx;
 	}

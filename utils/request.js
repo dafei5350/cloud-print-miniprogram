@@ -7,7 +7,8 @@ function request({ url, data, method }) {
       data,
       method,
       header: {
-        // Authorization: store.state.user.token
+        Authorization: store.state.user.token,
+				'Content-Type': 'application/x-www-form-urlencoded'
       },
       success: ({ data }) => {
         if (data.success) {

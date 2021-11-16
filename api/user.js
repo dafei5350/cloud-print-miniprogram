@@ -6,7 +6,7 @@ import request from '../utils/request.js'
 export function login(data) {
 	console.log(data)
 	return request({
-		url: '/user/wxapp/authorize',
+		url: '/user/wxapp/login',
 		method: 'POST',
 		data
 	})
