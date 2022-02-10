@@ -1,1 +1,0 @@
-<view><view class="padding flex flex-direction"><button class="cu-btn bg-grey lg">{{msg}}</button></view></view>

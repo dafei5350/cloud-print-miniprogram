@@ -1,7 +1,7 @@
 <template>
 		<view>
-			<my-login></my-login>
-<!-- 			<view class="padding flex flex-direction">
+			<!-- <my-login></my-login> -->
+			<!-- <view class="padding flex flex-direction">
 				<button class="cu-btn bg-grey lg" @click="getUserInfo">切换打印机</button>
 			</view> -->
 		</view>

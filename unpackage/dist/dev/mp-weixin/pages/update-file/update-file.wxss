@@ -1,16 +1,4 @@
 
-.null-img.data-v-75c65d88{
-	width: 100vw;
-	height: 75vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-.null-img image.data-v-75c65d88{
-	width: 300rpx;
-	height: 300rpx;
-}
 .container.data-v-75c65d88{
 	margin-bottom: 200rpx;
 }

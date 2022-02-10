@@ -1,6 +1,4 @@
 {
-  "navigationBarTitleText": "uni-app",
-  "usingComponents": {
-    "my-login": "/components/my-login/my-login"
-  }
+  "navigationBarTitleText": "我的",
+  "usingComponents": {}
 }

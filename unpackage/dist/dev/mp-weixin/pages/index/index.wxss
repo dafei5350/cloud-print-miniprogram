@@ -1,0 +1,25 @@
+
+.bg-head.data-v-57280228{
+	width: 100%;
+	height: 600rpx;
+	background-image: linear-gradient(180deg, #54b1ff , #ffffff 99%);
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
+.swiper-radius.data-v-57280228{
+	border-radius: 20rpx;
+}
+.default-print.data-v-57280228{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 120rpx;
+}
+.default-print .img.data-v-57280228{
+	width: 600rpx;
+	height: 300rpx;
+}
+

@@ -37,6 +37,15 @@ export default {
 </script>
 
 <style>
-@import 'colorui/main.css';
-@import 'colorui/icon.css';
+	@import 'colorui/main.css';
+	@import 'colorui/icon.css';
+	page{
+		background-color: #fff;
+	}
+	.flex-center{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 </style>

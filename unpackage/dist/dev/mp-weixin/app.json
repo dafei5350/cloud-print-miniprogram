@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/experiment/experiment",
     "pages/my/my",
     "pages/update-file/update-file"
   ],
@@ -25,6 +26,12 @@
         "text": "首页"
       },
       {
+        "iconPath": "static/tabbar/test.png",
+        "selectedIconPath": "static/tabbar/test_selected.png",
+        "pagePath": "pages/experiment/experiment",
+        "text": "实验室"
+      },
+      {
         "iconPath": "static/tabbar/profile.png",
         "selectedIconPath": "static/tabbar/profile_selected.png",
         "pagePath": "pages/my/my",
@@ -34,6 +41,5 @@
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }

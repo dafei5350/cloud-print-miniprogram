@@ -4290,4 +4290,13 @@ scroll-view.cu-steps .cu-item {
 .cuIcon-btn:before {
 	content: "\e601";
 }
+page{
+	background-color: #fff;
+}
+.flex-center{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
